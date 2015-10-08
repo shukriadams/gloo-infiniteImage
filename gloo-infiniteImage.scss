@@ -1,0 +1,27 @@
+.gloo-infiniteImage{
+  // override to set height of image
+  max-height:gloo-utils-toEm(500px);
+  overflow: hidden;
+
+  img {
+    max-width:none;
+    height:auto;
+    position: relative;
+    width:140%;
+    left:-20%;
+    @media #{$gloo-responsive-small}{
+      width:140%;
+      left:-20%;
+    }
+    @media #{$gloo-responsive-medium}{
+      width:120%;
+      left:-10%;
+    }
+    @media #{$gloo-responsive-large}{
+      width:100%;
+      left:0;
+      // override to set center-shift effect of image
+      top:gloo-utils-toEm(-100px);
+    }
+  }
+}
